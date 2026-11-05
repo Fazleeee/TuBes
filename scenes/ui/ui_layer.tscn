@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/ui_manager.gd" id="1_uimanager"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="2_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="3_pause"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game_over_menu.tscn" id="4_gameover"]
+
+[node name="UILayer" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_uimanager")
+
+[node name="HUD" parent="." instance=ExtResource("2_hud")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_pause")]
+
+[node name="GameOverMenu" parent="." instance=ExtResource("4_gameover")]
